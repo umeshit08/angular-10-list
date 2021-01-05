@@ -1,0 +1,49 @@
+<div class="bg-content">
+
+	<h1 class="heading">SpaceX Launch Programs</h1>
+
+	<div class="container">
+		<div class="row">
+			<ng-template ngFor let-user [ngForOf]="listData" let-i="index">
+				<div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+					<div class="card">
+
+						<div class="row img-size">
+							<div class="col-2"></div>
+							<div class="col-8">
+								<img [src]="user?.links?.mission_patch" width="100%" height="100%" alt="No Image available">
+							</div>
+								<div class="col-2"></div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-12">
+									<div class="title">{{user?.mission_name}} #{{i+1}}</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-12 block">
+									<div class="label">Mission Ids :</div>
+									<span class="value">{{user?.mission_id }}</span>
+								</div>
+								<div class="col-md-12 block">
+									<div class="label">Launch Year :</div>
+									<span class="value">{{user?.launch_year }}</span>
+								</div>
+								<div class="col-md-12 block">
+									<div class="label">Sucessfull Launch :</div>
+									<span class="value">{{user?.launch_success }}</span>
+								</div>
+								<div class="col-md-12 block">
+									<div class="label">Sucessfull Land :</div>
+									<span class="value"></span>
+								</div>
+							</div>
+
+						</div>
+					</div>
+			</ng-template>
+		</div>
+	</div>
+	<div>
